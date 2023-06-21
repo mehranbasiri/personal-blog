@@ -91,6 +91,41 @@ html {
 :focus {
   outline-offset: 4px;
 }
+/* =======scroll top btn======== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 35px;
+  transition: all 0.3s linear;
+  z-index: 10;
+}
+.scroll-top-btn ion-icon {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 15px;
+  top: 13px;
+  transition: all 0.3s linear;
+  font-size: 20px;
+}
+.scroll-top-btn:hover {
+  background-color: #211d1d;
+}
+.scroll-top-btn:hover ion-icon {
+  top: 7px;
+}
+.scroll-top-btn.none {
+  display: none;
+}
+.scroll-top-btn.block {
+  display: block;
+  background-color: red;
+}
 
 /* ======scrollbar style==== */
 ::-webkit-scrollbar {
@@ -246,8 +281,9 @@ header .btn-group {
 .theme-btn-mobile ion-icon {
   display: none;
 }
-.theme-btn-mobile.light.sun,
-.theme-btn-mobile.dark.moon {
+
+.theme-btn-mobile.light .sun,
+.theme-btn-mobile.dark .moon {
   display: block;
 }
 .mobile-nav {
